@@ -6,11 +6,11 @@ import {AppWrap, MotionWrap} from "../../wrapper";
 import {urlFor, client} from "../../client";
 
 import './Skills.scss';
-import work from "../Work/Work";
+
 
 const Skills = () => {
 
-    const [experience, setExperience] = useState([]);
+    const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
 
 
@@ -19,7 +19,7 @@ const Skills = () => {
         const skillsquery = '*[_type=="skills"]'
         client.fetch(query)
             .then((data) => {
-                setExperience(data);
+                setExperiences(data);
             })
         client.fetch(skillsquery)
             .then((data) => {
@@ -41,7 +41,9 @@ const Skills = () => {
                             className="app__skills-item app_flex"
                             key={skill.name}
                         >
-                            <div className="app__flex" style={{backgroundColor: skill.bgColor}}>
+                            <div className="app__flex" 
+			    style={{backgroundColor: skill.bgColor}}
+			    >
                                 <img src={urlFor(skill.icon)} alt={skill.name}/>
                             </div>
                             <p className="p-text">{skill.name}</p>
@@ -50,8 +52,8 @@ const Skills = () => {
 
                 </motion.div>
 
-                <motion.div className="app__skills-exp">
-                    {experience?.map((experience) => (
+        <div className="app__skills-exp">
+          {experiences.map((experience) => (
                         <motion.div
                             className="app__skills-exp-item"
                             key={experience.year}
@@ -61,18 +63,20 @@ const Skills = () => {
                             </div>
                             <motion.div className="app__skills-exp-works">
                                 {experience.works.map((work) => (
+                  <>
                                     <motion.div
                                         whileInView={{opacity: [0, 1]}}
                                         transition={{duration: 0.5}}
                                         className="app__skills-exp-work app_flex"
                                         data-tip
-                                        data-fo={work.name}
+                      data-for={work.name}
                                         key={work.name}
                                     >
                                         <h4 className="bold-text">{work.name}</h4>
                                         <p className="p-text">
                                             {work.company}
                                         </p>
+					 </motion.div>
                                         <ReactToolTip
                                             id={work.name}
                                             effect="solid"
@@ -81,17 +85,17 @@ const Skills = () => {
                                         >
                                             {work.desc}
                                         </ReactToolTip>
-                                    </motion.div>
+                  </>
                                 ))}
                             </motion.div>
 
                         </motion.div>
                     ))}
-                </motion.div>
+        </div>
 
             </div>
         </>
     );
 }
 
-export default AppWrap(MotionWrap(Skills,'app_skills'),'skills',"app__whitebg");
+export default AppWrap(MotionWrap(Skills,'app__skills'),'skills',"app__whitebg");

@@ -56,4 +56,4 @@ const About = (effect, deps) => {
   )
 }
 
-export default AppWrap(MotionWrap(About,'app_about'),'about',"app__whitebg");
+export default AppWrap(MotionWrap(About,'app__about'),'about',"app__whitebg");

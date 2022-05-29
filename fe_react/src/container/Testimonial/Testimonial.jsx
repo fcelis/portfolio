@@ -36,21 +36,21 @@ const Testimonial = () => {
             {testimonials.length && (
                 <>
                     <div className="app__testimonial-item app_flex">
-                        <img src={urlFor(test.imgurl)} />
+            <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
                         <div className="app__testimonial-content">
-                            <p className="p-text">{test.feedback}</p>
+              <p className="p-text">{testimonials[currentIndex].feedback}</p>
                             <div>
-                                <h4 className="bold-text">{test.name}</h4>
-                                <h5 className="p-text">{test.company}</h5>
-                            </div>
-                        </div>
-                    </div>
+                <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
+                <h5 className="p-text">{testimonials[currentIndex].company}</h5>
+              </div>
+            </div>
+          </div>
 
                     <div className="app__testimonial-btns app__flex">
                         <div className="app__flex" onClick={()=>handleClick( currentIndex === 0 ?testimonials.length -1 : currentIndex -1)}>
                             <HiChevronLeft />
                         </div>
-                        <div className="app__flex" onClick={()=>handleClick( currentIndex === 1 ? 0 : currentIndex + 1)}>
+            <div className="app__flex" onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
                             <HiChevronRight />
                         </div>
 
@@ -72,4 +72,4 @@ const Testimonial = () => {
         </>);
 }
 
-export default AppWrap(MotionWrap(Testimonial,'app_testimonials'),'skills',"app__primarybg");
+export default AppWrap(MotionWrap(Testimonial,'app__testimonial'),'testimonials',"app__primarybg");

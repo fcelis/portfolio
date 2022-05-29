@@ -17,8 +17,6 @@
 
   display: flex;
   flex-direction: row;
-  background-color: var( --lightGray-color);
-
 }
 
 .app__flex {
@@ -32,6 +30,7 @@
   width: 100%;
   flex-direction: column;
   padding: 4rem 2rem;
+
   @media screen and (max-width: 450px) {
     padding: 4rem 1rem 2rem;
   }
@@ -47,6 +46,7 @@
   align-items: flex-end;
 
   p {
+    font-size: 1rem;
     text-transform: uppercase;
     color: var(--black-color);
   }
@@ -186,11 +186,4 @@
   .copyright {
     padding: 2rem;
   }
-}
-//
-//.app__whitebg {
-//  background-color: #fff;
-//}
-.app__whitebg {
-  background-color: var(--white-color);
 }

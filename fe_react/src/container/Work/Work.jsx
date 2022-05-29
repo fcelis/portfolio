@@ -82,7 +82,7 @@ const Work = () => {
                                     </a>     <a href={work.codeLink} target="_blank" rel="noreferrer">
                                         <motion.div
                                             whileInView={{scale:[0,1]}}
-                                            whileHover={{scale:[1,0.9]}}
+                                            whileHover={{scale:[1,0.90]}}
 
                                             transition={{duration:0.25}}
                                             className="app__flex"
@@ -110,4 +110,4 @@ const Work = () => {
 }
 
 
-export default AppWrap(MotionWrap(Work,'app_work'),'works',"app__primarybg");
+export default AppWrap(MotionWrap(Work,'app__works'),'works',"app__primarybg");

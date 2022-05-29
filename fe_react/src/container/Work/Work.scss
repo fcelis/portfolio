@@ -17,23 +17,25 @@
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
-    font-width: 800;
+    font-weight: 800;
+
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 0.5rem;
     &:hover {
-      color: #fff;
       background-color: var(--secondary-color);
+      color: #fff;
     }
 
-    @media screen and (min-width: 2000px){
+    @media screen and (min-width: 2000px) {
       padding: 1rem 2rem;
       border-radius: 0.85rem;
     }
   }
+
   .item-active {
-    color: #fff;
     background-color: var(--secondary-color);
+    color: #fff;
   }
 }
 
@@ -49,16 +51,17 @@
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
-    color: #000000;
+    color: #000;
 
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
       box-shadow: 0 0 25px rgba(0,0,0,0.2);
     }
-    @media screen and ( min-width: 2000px) {
-      height: 470px;
-      padding: 1.5rem;
+
+    @media screen and (min-width: 2000px) {
+      width: 470px;
+      padding: 1.25rem;
       border-radius: 0.75rem;
     }
     @media screen and (max-width: 300px ){
@@ -79,17 +82,17 @@
     object-fit: cover;
   }
 
-  @media screen and ( min-width: 2000px) {
-    height: 230px;
+  @media screen and (min-width: 2000px) {
+    height: 350px;
   }
 }
 
 .app__work-hover {
   position: absolute;
   top: 0;
-  left:0;
-  right: 0;
+  left: 0;
   bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
@@ -100,8 +103,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.5);
-    color: var(--white-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
     margin: 1rem;
     font-family: var(--font-base);
     font-weight: 800;
@@ -124,13 +128,17 @@
   h4 {
     margin-top: 1rem;
     line-height: 1.5;
+
+    @media screen and (min-width: 2000px) {
+      margin-top: 3rem;
+    }
   }
 
   .app__work-tag {
     position: absolute;
     padding: 0.5rem 1rem ;
     border-radius: 10px;
-    background-color: var(--white-color);
+    background-color: #fff;
     top: -25px;
   }
 }

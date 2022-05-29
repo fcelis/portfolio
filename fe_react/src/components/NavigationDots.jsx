@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/anchor-has-content */
+
 import React from 'react';
 
 const NavigationDots = ({active}) => {
     return (
         <div className="app__navigation">
-            {['home','about','contact', 'testimonial','work','skill'].map((item, index) =>(
+            {['home','about','works', 'skills','testimonials','contact'].map((item, index) =>(
                     <a
                         href={`#${item}`}
                         key={item + index}

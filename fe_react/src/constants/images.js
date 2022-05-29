@@ -24,8 +24,11 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
+import devops from '../assets/devops.jpg';
+
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import logosolid from '../assets/logo-solid.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -60,6 +63,7 @@ export default {
     about03,
     about04,
     profile,
+    devops,
     circle,
     logo,
     adidas,
@@ -69,4 +73,5 @@ export default {
     nb,
     skype,
     spotify,
+    logosolid
 };
