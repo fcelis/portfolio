@@ -33,7 +33,7 @@ const Header = () => {
                 <div className="tag-cmp app__flex">
                     <p className="p-text ">Software Engineer</p>
                     <p className="p-text">DevOps Engineer</p>
-                    <p className="p-text">Mobile Developer</p>
+                    {/*<p className="p-text">Mobile Developer</p>*/}
                 </div>
             </div>
         </motion.div
@@ -56,7 +56,7 @@ const Header = () => {
         <motion.div
             variant={scaleVariants}
           whileInView={scaleVariants.whileInView} className="app__header-circles">
-            {[images.flutter, images.redux, images.sass].map((circle,index) =>
+            {[images.php, images.redux, images.sass].map((circle,index) =>
                 <div className="circle-cmp app__flex" key={`circle-${index}`}>
                     <img src={circle} alt="circle"/>
                 </div>
